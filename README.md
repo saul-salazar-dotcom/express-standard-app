@@ -34,16 +34,16 @@ try {
 
 ## Docker
 
-Image: `saulsalazar/express-standard-app`
+Image: `saulmmendoza/express-standard-app`
 
 ```sh
-docker run -v .:/app/ -v /app/node_modules -p 3000:3000 saulsalazar/express-standard-app
+docker run -v .:/app/ -v /app/node_modules -p 3000:3000 saulmmendoza/express-standard-app
 ```
 
 ### Dockerfile
 
 ```Dockerfile
-FROM saulsalazar/express-standard-app
+FROM saulmmendoza/express-standard-app
 ```
 
 ### Docker Compose
@@ -53,7 +53,7 @@ Example `docker-compose.yaml` file
 ```yaml
 services:
   server:
-    image: saulsalazar/express-standard-app
+    image: saulmmendoza/express-standard-app
     volumes:
       - .:/app/
       - /app/node_modules
