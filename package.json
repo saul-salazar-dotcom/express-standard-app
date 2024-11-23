@@ -1,0 +1,43 @@
+{
+  "name": "express-standard-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saul-salazar-dotcom/express-standard-app.git"
+  },
+  "keywords": [
+    "express",
+    "expressJS",
+    "standard",
+    "app",
+    "application",
+    "security",
+    "logs",
+    "logs file",
+    "rotating log file",
+    "cors",
+    "gzip",
+    "compression"
+  ],
+  "author": "Saul Salazar (saul-salazar.com)",
+  "license": "ISC",
+  "description": "ExpressJS with defaults (security HTTP headers, rotating log files, CORS and gzip compression)",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "compression": "^1.7.5",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0",
+    "rotating-file-stream": "^3.2.5"
+  },
+  "bugs": {
+    "url": "https://github.com/saul-salazar-dotcom/express-standard-app/issues"
+  },
+  "homepage": "https://github.com/saul-salazar-dotcom/express-standard-app"
+}
