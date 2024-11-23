@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "docker": "docker build -t saulmmendoza/express-standard-app . && docker push saulmmendoza/express-standard-app",
+    "docker2": "docker image tag saulmmendoza/express-standard-app saulmmendoza/express-standard-app:${VERSION} && docker push saulmmendoza/express-standard-app:${VERSION}"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/saul-salazar-dotcom/express-standard-app.git"
+    "url": "git+https://github.com/saul-salazar-dotcom/express-standard-app.git"
   },
   "keywords": [
     "express",
