@@ -2,9 +2,20 @@ const morgan = require('morgan')
 const path = require('path')
 const rfs = require('rotating-file-stream')
 
+function trueExceptTestingEnvironment () {
+  switch (process.env.NODE_ENV) {
+    case '"test"': // windows OS fix
+    case 'test':
+      return false
+
+    default:
+      return true
+  }
+}
+
 const accessLogFiles = rfs.createStream('access.log', {
   path: path.join(process.cwd(), 'logs'), // logs folder
-  teeToStdout: true, // output to process.stdout
+  teeToStdout: trueExceptTestingEnvironment(), // output to process.stdout
   compress: 'gzip', // compress rotated files
   size: '50M' // rotate every 50mb
 })
